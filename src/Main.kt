@@ -1,3 +1,6 @@
+import dsls_interpreter.Numero
+import dsls_interpreter.Soma
+import dsls_interpreter.Subtracao
 import memento.Contrato
 import memento.Historico
 import memento.TipoContrato
@@ -16,6 +19,11 @@ import kotlin.collections.ArrayList
 var tamPapel = 30
 
 fun main() {
+    var direita =  Subtracao(Numero(10), Numero(20))
+    var esquerda =  Soma(Numero(10), Numero(20))
+    var soma =  Soma(esquerda, direita)
+    println("Res: ${soma.avalia()}")
+
 }
 
 private fun memento() {
